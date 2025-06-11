@@ -357,7 +357,15 @@ export default function Chat() {
               </div>
             )}
             
-            {messages.map((message) => (
+            {messages.map((message, index) => {
+              // Find the index of the last bot message
+              const lastBotMessageIndex = messages.map((msg, idx) => ({ ...msg, originalIndex: idx }))
+                .filter(msg => !msg.isUser)
+                .pop()?.originalIndex;
+              
+              const showServiceButtons = !message.isUser && index === lastBotMessageIndex;
+              
+              return (
               <div
                 key={message.id}
                 className={`flex flex-col ${message.isUser ? 'items-end' : 'items-start'}`}
@@ -378,7 +386,7 @@ export default function Chat() {
                 </div>
                 
                 {/* Service buttons after bot messages */}
-                {!message.isUser && (
+                {showServiceButtons && (
                   <div className="mt-2 max-w-xs lg:max-w-md">
                     <div className="flex space-x-2">
                       {serviceButtons.map((service) => (
@@ -402,7 +410,8 @@ export default function Chat() {
                   </div>
                 )}
               </div>
-            ))}
+              );
+            })}
             
             {isLoading && (
               <div className="flex justify-start">
