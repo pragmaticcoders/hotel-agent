@@ -311,9 +311,6 @@ export default function Chat() {
                 <p className="text-sm text-green-100">Asystent Wirtualny • Szczawnica, Pieniny</p>
               </div>
             </div>
-            <div className="text-xs text-green-100">
-              Sesja: {sessionId.substring(0, 20)}...
-            </div>
       </div>
 
           {/* Language Selection */}
