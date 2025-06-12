@@ -26,8 +26,38 @@ export default function MessageBubble({
   
   const showServiceButtons = !message.isUser && index === lastBotMessageIndex;
 
+  // Sender labels based on language
+  const senderLabels = {
+    user: {
+      pl: 'Gość',
+      de: 'Gast', 
+      gb: 'Guest'
+    },
+    bot: {
+      pl: 'Hotel Smile Asystent',
+      de: 'Hotel Smile Assistent',
+      gb: 'Hotel Smile Assistant'
+    }
+  };
+
+  const getSenderLabel = (isUser: boolean) => {
+    const labels = isUser ? senderLabels.user : senderLabels.bot;
+    return labels[selectedLanguage as keyof typeof labels] || labels.gb;
+  };
+
   return (
     <div className={`flex flex-col ${message.isUser ? 'items-end' : 'items-start'}`}>
+      {/* Sender Label */}
+      <div className={`mb-1 ${message.isUser ? 'text-right' : 'text-left'}`}>
+        <span className={`text-xs font-medium px-2 py-1 rounded-full ${
+          message.isUser 
+            ? 'bg-amber-200 text-amber-800' 
+            : 'bg-amber-100 text-amber-700'
+        }`}>
+          {message.isUser ? '👤' : '🏨'} {getSenderLabel(message.isUser)}
+        </span>
+      </div>
+      
       <div
         className={`max-w-xs lg:max-w-md px-4 py-2 rounded-lg ${
           message.isUser

@@ -50,12 +50,23 @@ export const useChat = () => {
     const language = LANGUAGES.find((lang) => lang.code === languageCode);
     if (!language) return;
 
+    // Don't do anything if the language is already selected
+    if (selectedLanguage === languageCode) return;
+
     setSelectedLanguage(languageCode);
 
     // Send automatic message about language selection
+    const languageMessages = {
+      pl: `Wybrałem język Polski ${language.flag} jako preferowany język.`,
+      de: `Ich habe ${language.name} ${language.flag} als bevorzugte Sprache gewählt.`,
+      gb: `I've selected ${language.name} ${language.flag} as my preferred language.`,
+    };
+
     const selectionMessage: Message = {
       id: Date.now().toString(),
-      text: `I've selected ${language.name} ${language.flag} as my preferred language.`,
+      text:
+        languageMessages[languageCode as keyof typeof languageMessages] ||
+        languageMessages.gb,
       isUser: true,
       timestamp: new Date(),
     };
