@@ -80,8 +80,8 @@ export default function ChatHeader({ selectedLanguage, isLoading, onLanguageSele
                 onClick={() => onLanguageSelect(language.code)}
                 className={`flex items-center space-x-2 px-3 py-2 rounded-lg border transition-all duration-200 ${
                   selectedLanguage === language.code
-                    ? 'bg-white text-amber-700 border-white shadow-md transform scale-105 font-semibold'
-                    : 'bg-amber-600 text-white border-amber-500 hover:bg-amber-500'
+                    ? 'bg-amber-800 text-white border-amber-700 shadow-md transform scale-105 font-semibold'
+                    : 'bg-white text-amber-800 border-white hover:bg-amber-50'
                 }`}
                 disabled={isLoading}
               >

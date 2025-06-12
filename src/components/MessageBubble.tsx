@@ -1,5 +1,6 @@
 import { Message } from '../types';
 import ServiceButtons from './ServiceButtons';
+import ReactMarkdown from 'react-markdown';
 
 interface MessageBubbleProps {
   message: Message;
@@ -34,7 +35,47 @@ export default function MessageBubble({
             : 'bg-white text-gray-900 border border-amber-200 shadow-sm'
         }`}
       >
-        <p className="text-sm whitespace-pre-wrap">{message.text}</p>
+        {message.isUser ? (
+          <p className="text-sm whitespace-pre-wrap">{message.text}</p>
+        ) : (
+          <div className="text-sm prose prose-sm max-w-none prose-amber">
+            <ReactMarkdown
+              components={{
+                p: ({ children }) => <p className="mb-2 last:mb-0">{children}</p>,
+                strong: ({ children }) => <strong className="font-bold text-amber-900">{children}</strong>,
+                em: ({ children }) => <em className="italic">{children}</em>,
+                ul: ({ children }) => <ul className="list-disc list-inside mb-2 space-y-1">{children}</ul>,
+                ol: ({ children }) => <ol className="list-decimal list-inside mb-2 space-y-1">{children}</ol>,
+                li: ({ children }) => <li className="text-sm">{children}</li>,
+                h1: ({ children }) => <h1 className="text-lg font-bold mb-2 text-amber-900">{children}</h1>,
+                h2: ({ children }) => <h2 className="text-base font-bold mb-2 text-amber-900">{children}</h2>,
+                h3: ({ children }) => <h3 className="text-sm font-bold mb-1 text-amber-900">{children}</h3>,
+                blockquote: ({ children }) => (
+                  <blockquote className="border-l-4 border-amber-300 pl-3 italic bg-amber-50 py-1 my-2">
+                    {children}
+                  </blockquote>
+                ),
+                code: ({ children }) => (
+                  <code className="bg-amber-100 text-amber-900 px-1 py-0.5 rounded text-xs font-mono">
+                    {children}
+                  </code>
+                ),
+                a: ({ href, children }) => (
+                  <a 
+                    href={href} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-amber-700 hover:text-amber-900 underline"
+                  >
+                    {children}
+                  </a>
+                ),
+              }}
+            >
+              {message.text}
+            </ReactMarkdown>
+          </div>
+        )}
         <p className={`text-xs mt-1 ${
           message.isUser ? 'text-amber-100' : 'text-gray-500'
         }`}>
