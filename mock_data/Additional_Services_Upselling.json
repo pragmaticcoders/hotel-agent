@@ -1,0 +1,52 @@
+[
+  {
+    "row_number": 2,
+    "Service_ID": "AS001",
+    "Service_Name": "Romantyczna aranżacja pokoju",
+    "Description": "Płatki róż, świece",
+    "Price_PLN": "120,00 zł",
+    "Upselling_Suggestion_Context": "Gdy gość wspomina o specjalnej okazji (rocznica, urodziny), podróży we dwoje lub pyta o romantyczne dodatki.",
+    "Source_URL": "https://hotelsmile.pl/atrakcje-oraz-uslugi-dodatkowe",
+    "Notes": ""
+  },
+  {
+    "row_number": 3,
+    "Service_ID": "AS002",
+    "Service_Name": "Dostawa kwiatów do pokoju",
+    "Description": "Kwiaty dostarczone do pokoju",
+    "Price_PLN": "Do określonej kwoty",
+    "Upselling_Suggestion_Context": "Gdy gość chce zrobić niespodziankę, świętuje okazję lub pyta o możliwość zamówienia kwiatów.",
+    "Source_URL": "https://hotelsmile.pl/atrakcje-oraz-uslugi-dodatkowe",
+    "Notes": "Cena zależy od zamówienia."
+  },
+  {
+    "row_number": 4,
+    "Service_ID": "AS003",
+    "Service_Name": "Zestaw 4 piw regionalnych",
+    "Description": "Zestaw czterech piw z lokalnego browaru. Specjalna oferta dla zamówień przez chat.",
+    "Price_PLN": "59,00 zł",
+    "Upselling_Suggestion_Context": "Gdy gość pyta o lokalne produkty, pamiątki lub chce spróbować czegoś regionalnego.",
+    "Source_URL": "https://hotelsmile.pl/atrakcje-oraz-uslugi-dodatkowe",
+    "Notes": ""
+  },
+  {
+    "row_number": 5,
+    "Service_ID": "AS004",
+    "Service_Name": "Patera owoców sezonowych",
+    "Description": "Świeże owoce sezonowe.",
+    "Price_PLN": "45,00 zł",
+    "Upselling_Suggestion_Context": "Jako miły dodatek na powitanie, gdy gość pyta o lekkie przekąski lub zdrowe opcje.",
+    "Source_URL": "https://hotelsmile.pl/atrakcje-oraz-uslugi-dodatkowe",
+    "Notes": ""
+  },
+  {
+    "row_number": 6,
+    "Service_ID": "AS005",
+    "Service_Name": "Butelka wina musującego z owocami sezonowymi",
+    "Description": "Wino musujące podane z owocami.",
+    "Price_PLN": "90,00 zł",
+    "Upselling_Suggestion_Context": "Idealne na celebrację, specjalną okazję lub jako romantyczny gest.",
+    "Source_URL": "https://hotelsmile.pl/atrakcje-oraz-uslugi-dodatkowe",
+    "Notes": ""
+  }
+] 

@@ -41,11 +41,11 @@ export default function ChatHeader({
                 {t('appTitle')}
               </h1>
             </div>
-            <button
-              onClick={onToggleCollapse}
-              className="bg-white/20 hover:bg-white/30 text-white p-2 rounded-lg transition-colors"
-              title={selectedLanguage === 'pl' ? 'Rozwiń header' : selectedLanguage === 'de' ? 'Header erweitern' : 'Expand header'}
-            >
+                          <button
+                onClick={onToggleCollapse}
+                className="bg-white/20 hover:bg-white/30 text-white p-2 rounded-lg transition-colors"
+                title={selectedLanguage === 'pl' ? 'Rozwiń header' : selectedLanguage === 'de' ? 'Header erweitern' : selectedLanguage === 'cz' ? 'Rozbalit záhlaví' : selectedLanguage === 'sk' ? 'Rozbaliť hlavičku' : 'Expand header'}
+              >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
@@ -74,7 +74,7 @@ export default function ChatHeader({
               <button
                 onClick={onToggleCollapse}
                 className="lg:hidden bg-white/20 hover:bg-white/30 text-white p-2 rounded-lg transition-colors"
-                title={selectedLanguage === 'pl' ? 'Zwiń header' : selectedLanguage === 'de' ? 'Header zusammenklappen' : 'Collapse header'}
+                title={selectedLanguage === 'pl' ? 'Zwiń header' : selectedLanguage === 'de' ? 'Header zusammenklappen' : selectedLanguage === 'cz' ? 'Sbalit záhlaví' : selectedLanguage === 'sk' ? 'Zbaliť hlavičku' : 'Collapse header'}
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
@@ -91,11 +91,15 @@ export default function ChatHeader({
                     {selectedLanguage === 'pl' && 'Zrelaksuj się w naszym SPA & Wellness!'}
                     {selectedLanguage === 'de' && 'Entspannen Sie sich in unserem SPA & Wellness!'}
                     {selectedLanguage === 'gb' && 'Relax in our SPA & Wellness center!'}
+                    {selectedLanguage === 'cz' && 'Odpočiňte si v našem SPA & Wellness!'}
+                    {selectedLanguage === 'sk' && 'Oddýchnite si v našom SPA & Wellness!'}
                   </p>
                   <p className="text-xs text-amber-700">
                     {selectedLanguage === 'pl' && 'Masaże, sauna, jacuzzi - zapytaj o dostępność'}
                     {selectedLanguage === 'de' && 'Massagen, Sauna, Jacuzzi - fragen Sie nach Verfügbarkeit'}
                     {selectedLanguage === 'gb' && 'Massages, sauna, jacuzzi - ask about availability'}
+                    {selectedLanguage === 'cz' && 'Masáže, sauna, jacuzzi - zeptejte se na dostupnost'}
+                    {selectedLanguage === 'sk' && 'Masáže, sauna, jacuzzi - opýtajte sa na dostupnosť'}
                   </p>
                 </div>
                 <button 
@@ -107,6 +111,10 @@ export default function ChatHeader({
                       ? 'Interesuje mnie spa. Jakie są dostępne usługi, godziny otwarcia i jak mogę dokonać rezerwacji?'
                       : selectedLanguage === 'de'
                       ? 'Ich interessiere mich für das Spa. Welche Dienstleistungen sind verfügbar, was sind die Öffnungszeiten und wie kann ich eine Reservierung vornehmen?'
+                      : selectedLanguage === 'cz'
+                      ? 'Zajímá mě spa. Jaké služby jsou k dispozici, jaké jsou otevírací hodiny a jak si mohu udělat rezervaci?'
+                      : selectedLanguage === 'sk'
+                      ? 'Zaujíma ma spa. Aké služby sú k dispozícii, aké sú otváracie hodiny a ako si môžem urobiť rezerváciu?'
                       : 'I am interested in the spa. What services are available, what are the opening hours and how can I make a reservation?';
                     
                     // We need to pass this up to the parent
@@ -116,6 +124,8 @@ export default function ChatHeader({
                   {selectedLanguage === 'pl' && 'Zapytaj'}
                   {selectedLanguage === 'de' && 'Fragen'}
                   {selectedLanguage === 'gb' && 'Ask'}
+                  {selectedLanguage === 'cz' && 'Zeptat se'}
+                  {selectedLanguage === 'sk' && 'Opýtať sa'}
                 </button>
               </div>
             </div>

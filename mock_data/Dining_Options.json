@@ -1,0 +1,42 @@
+[
+  {
+    "row_number": 1,
+    "Option_ID": "D001",
+    "Option_Name": "Śniadanie",
+    "Description": "Śniadanie w formie bufetu w głównej restauracji",
+    "Hours": "7:00 - 10:00",
+    "Location": "Restauracja główna",
+    "Price_Info": "Wliczone w cenę pobytu",
+    "Notes": "Numer skrótu: 2"
+  },
+  {
+    "row_number": 2,
+    "Option_ID": "D002",
+    "Option_Name": "Restauracja główna - obiad",
+    "Description": "Menu à la carte oraz propozycje dnia",
+    "Hours": "12:00 - 21:00",
+    "Location": "Restauracja główna",
+    "Price_Info": "Według cennika",
+    "Notes": ""
+  },
+  {
+    "row_number": 3,
+    "Option_ID": "D003",
+    "Option_Name": "Catering dietetyczny",
+    "Description": "Specjalne menu dla osób z ograniczeniami dietetycznymi",
+    "Hours": "Na zamówienie",
+    "Location": "Restauracja główna",
+    "Price_Info": "Dopłata",
+    "Notes": "Wymagane wcześniejsze zgłoszenie"
+  },
+  {
+    "row_number": 4,
+    "Option_ID": "D004",
+    "Option_Name": "Room service",
+    "Description": "Dostawa posiłków do pokoju",
+    "Hours": "7:00 - 22:00",
+    "Location": "Do pokoju",
+    "Price_Info": "Menu + dopłata za dostawę",
+    "Notes": "Czas dostawy: 30-45 min"
+  }
+] 

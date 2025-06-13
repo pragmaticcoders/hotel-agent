@@ -40,4 +40,4 @@ export interface Translation {
   contactInfo: string;
 }
 
-export type LanguageCode = "pl" | "de" | "gb";
+export type LanguageCode = "pl" | "de" | "gb" | "cz" | "sk";

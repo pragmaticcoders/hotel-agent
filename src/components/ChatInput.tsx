@@ -47,7 +47,14 @@ export default function ChatInput({
         </div>
         <div className="mt-2 text-center">
           <p className="text-xs text-amber-100">
-            📞 606 665 662 • 📍 ul. Główna 234, Szczawnica • 🌐{' '}
+            📞{' '}
+            <a 
+              href="tel:+48606665662" 
+              className="text-amber-200 hover:text-white underline transition-colors"
+            >
+              +48 606 665 662
+            </a>
+            {' '}• 📍 ul. Główna 234, Szczawnica • 🌐{' '}
             <a 
               href="https://hotelsmile.pl/" 
               target="_blank" 

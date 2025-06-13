@@ -1,0 +1,47 @@
+[
+  {
+    "row_number": 1,
+    "Facility_ID": "SPA001",
+    "Facility_Name": "Sauna fińska",
+    "Description": "Tradycyjna sauna sucha o temperaturze 80-90°C",
+    "Hours": "9:00 - 21:00",
+    "Price_Info": "Wliczona w cenę pobytu",
+    "Notes": "Możliwość rezerwacji sesji prywatnych"
+  },
+  {
+    "row_number": 2,
+    "Facility_ID": "SPA002",
+    "Facility_Name": "Jacuzzi",
+    "Description": "Wanna z hydromasażem dla 6 osób",
+    "Hours": "9:00 - 21:00",
+    "Price_Info": "Wliczona w cenę pobytu",
+    "Notes": "Rezerwacja zalecana w sezonie"
+  },
+  {
+    "row_number": 3,
+    "Facility_ID": "SPA003",
+    "Facility_Name": "Strefa relaksu",
+    "Description": "Pokój wypoczynkowy z leżakami i herbatką",
+    "Hours": "9:00 - 21:00",
+    "Price_Info": "Wliczona w cenę pobytu",
+    "Notes": "Cisza obowiązkowa"
+  },
+  {
+    "row_number": 4,
+    "Facility_ID": "SPA004",
+    "Service_Name": "Masaż relaksacyjny",
+    "Description": "Masaż całego ciała olejkami aromatycznymi",
+    "Duration": "55 min",
+    "Price_Info": "229 PLN",
+    "Notes": "Rezerwacja obowiązkowa"
+  },
+  {
+    "row_number": 5,
+    "Facility_ID": "SPA005",
+    "Service_Name": "Masaż gorącymi kamieniami",
+    "Description": "Terapia kamieniami bazaltowymi",
+    "Duration": "55 min", 
+    "Price_Info": "239 PLN",
+    "Notes": "Rezerwacja obowiązkowa, przeciwwskazania: ciąża"
+  }
+] 

@@ -10,7 +10,7 @@ interface ServiceButtonsProps {
 
 export default function ServiceButtons({ selectedLanguage, isLoading, onServiceButtonClick }: ServiceButtonsProps) {
   return (
-    <div className="mt-2 max-w-xs lg:max-w-md">
+    <div className="mt-2 max-w-md lg:max-w-2xl">
       <div className="flex space-x-2">
         {SERVICE_BUTTONS.map((service) => (
           <button

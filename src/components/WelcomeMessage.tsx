@@ -1,10 +1,13 @@
 import { getTranslation } from '../translations';
+import ServiceButtons from './ServiceButtons';
 
 interface WelcomeMessageProps {
   selectedLanguage: string;
+  isLoading: boolean;
+  onServiceButtonClick: (serviceId: string) => void;
 }
 
-export default function WelcomeMessage({ selectedLanguage }: WelcomeMessageProps) {
+export default function WelcomeMessage({ selectedLanguage, isLoading, onServiceButtonClick }: WelcomeMessageProps) {
   const t = (key: keyof typeof import('../translations').translations.pl) => 
     getTranslation(selectedLanguage, key);
 
@@ -30,6 +33,15 @@ export default function WelcomeMessage({ selectedLanguage }: WelcomeMessageProps
         <p className="text-sm text-gray-500 mt-4">
           {t('startTyping')}
         </p>
+        
+        {/* Service Buttons */}
+        <div className="mt-4 flex justify-center">
+          <ServiceButtons
+            selectedLanguage={selectedLanguage}
+            isLoading={isLoading}
+            onServiceButtonClick={onServiceButtonClick}
+          />
+        </div>
       </div>
     </div>
   );

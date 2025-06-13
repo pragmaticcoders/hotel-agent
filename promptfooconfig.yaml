@@ -1,0 +1,34 @@
+description: "Test SPA services conversation with Langfuse system prompt"
+
+providers:
+  - openai:gpt-4o-mini
+
+prompts:
+  - prompts/no_threaded_prompt.js
+
+tests:
+  - vars:
+      user_message: "Jakie są zabiegi SPA?"
+    assert:
+      - type: contains
+        value: "Sauna fińska"
+      - type: contains
+        value: "Jacuzzi"
+      - type: contains
+        value: "Masaż relaksacyjny"
+      - type: contains
+        value: "9:00 - 21:00"
+      - type: contains
+        value: "229 PLN"
+      - type: contains
+        value: "SPA"
+      - type: javascript
+        value: |
+          const response = output.toLowerCase();
+          const expectedTerms = ['sauna', 'jacuzzi', 'masaż', 'relaks'];
+          const foundTerms = expectedTerms.filter(term => response.includes(term));
+          return {
+            pass: foundTerms.length >= 2,
+            score: foundTerms.length / expectedTerms.length,
+            reason: `Found ${foundTerms.length}/${expectedTerms.length} expected SPA terms: ${foundTerms.join(', ')}`
+          };
